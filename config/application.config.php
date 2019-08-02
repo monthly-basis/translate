@@ -3,6 +3,7 @@
 return [
     'modules' => [
         'LeoGalleguillos\Memcached',
+        'LeoGalleguillos\Translate',
         'Zend\Db',
         'Zend\Router',
     ],

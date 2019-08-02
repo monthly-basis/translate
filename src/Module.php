@@ -30,9 +30,14 @@ class Module
     {
         return [
             'factories' => [
+                TranslateService\GetArray::class => function ($sm) {
+                    return new TranslateService\GetArray(
+                        $sm->get(TranslateTable\Translate::class)
+                    );
+                },
                 TranslateService\Translate::class => function ($sm) {
                     return new TranslateService\Translate(
-                        $sm->get(TranslateTable\Translate::class)
+                        $sm->get(TranslateService\GetArray::class)
                     );
                 },
                 TranslateTable\Translate::class => function ($serviceManager) {

@@ -1,20 +1,21 @@
 <?php
 namespace LeoGalleguillos\Translate\Model\Service;
 
-use LeoGalleguillos\Translate\Model\Table as TranslateTable;
+use LeoGalleguillos\Translate\Model\Service as TranslateService;
 
 class Translate
 {
     public function __construct(
-        TranslateTable\Translate $translateTable
+        TranslateService\GetArray $getArrayService
     ) {
-        $this->translateTable = $translateTable;
+        $this->getArrayService = $getArrayService;
     }
 
     public function translate(
         string $string,
         string $language
     ) : string {
+        $array = $this->getArrayService->getArray();
         return $array[$string][$language] ?? '';
     }
 }

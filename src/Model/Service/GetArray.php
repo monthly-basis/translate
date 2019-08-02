@@ -3,7 +3,7 @@ namespace LeoGalleguillos\Translate\Model\Service;
 
 use LeoGalleguillos\Translate\Model\Table as TranslateTable;
 
-class Array
+class GetArray
 {
     public function __construct(
         TranslateTable\Translate $translateTable

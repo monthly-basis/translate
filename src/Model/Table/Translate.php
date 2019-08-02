@@ -4,7 +4,7 @@ namespace LeoGalleguillos\Translate\Model\Table;
 use Generator;
 use Zend\Db\Adapter\Adapter;
 
-class Task
+class Translate
 {
     /**
      * @var Adapter
