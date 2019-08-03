@@ -15,7 +15,7 @@ class Translate
         string $string,
         string $language
     ) : string {
-        $array = $this->getArrayService->getArray();
-        return $array[$string][$language] ?? '';
+        $array = $this->getArrayService->getArray($language);
+        return $array[$string] ?? '';
     }
 }
