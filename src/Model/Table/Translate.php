@@ -1,6 +1,7 @@
 <?php
 namespace LeoGalleguillos\Translate\Model\Table;
 
+use Exception;
 use Generator;
 use Zend\Db\Adapter\Adapter;
 
@@ -51,18 +52,23 @@ class Translate
         return (int) $row['count'];
     }
 
-    public function select(): Generator
+    public function selectLanguage(string $language): Generator
     {
-        $sql = '
-            SELECT `translate_id`
-                 , `en`
-                 , `es`
-                 , `fr`
+        $validLanguages = [
+            'es',
+            'fr',
+        ];
+        if (!in_array($language, $validLanguages)) {
+            throw new Exception('Invalid language.');
+        }
+        $sql = "
+            SELECT `en`
+                 , `$language`
               FROM `translate`
              ORDER
                 BY `translate_id` ASC
                  ;
-        ';
+        ";
         foreach ($this->adapter->query($sql)->execute() as $row) {
             yield($row);
         }

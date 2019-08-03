@@ -11,13 +11,12 @@ class GetArray
         $this->translateTable = $translateTable;
     }
 
-    public function getArray(): array {
-        $array = [];
-        foreach ($this->translateTable->select() as $row) {
-            $array[$row['en']] = [
-                'es' => $row['es'],
-                'fr' => $row['fr'],
-            ];
+    public function getArray(string $language): array {
+        $array     = [];
+        $generator = $this->translateTable->selectLanguage($language);
+
+        foreach ($generator as $row) {
+            $array[$row['en']] = $array[$row[$language]];
         }
         return $array;
     }

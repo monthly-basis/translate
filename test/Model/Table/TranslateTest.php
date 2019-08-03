@@ -1,6 +1,7 @@
 <?php
 namespace LeoGalleguillos\TranslateTest\Model\Table;
 
+use Exception;
 use LeoGalleguillos\Translate\Model\Table as TranslateTable;
 use LeoGalleguillos\Test\TableTestCase;
 use Zend\Db\Adapter\Exception\InvalidQueryException;
@@ -59,10 +60,18 @@ class TranslateTest extends TableTestCase
         }
     }
 
-    public function testSelect()
+    public function testSelectLanguage()
     {
-        $generator = $this->translateTable->select();
-        $this->assertEmpty(iterator_to_array($generator));
+        try {
+            $generator = $this->translateTable->selectLanguage('invalid');
+            $array     = iterator_to_array($generator);
+            $this->fail();
+        } catch (Exception $exception) {
+            $this->assertSame(
+                'Invalid language.',
+                $exception->getMessage()
+            );
+        }
 
         $this->translateTable->insert(
             'homework',
@@ -85,32 +94,40 @@ class TranslateTest extends TableTestCase
             'mathématiques'
         );
 
-        $generator = $this->translateTable->select();
-        $array = iterator_to_array($generator);
+        $generator = $this->translateTable->selectLanguage('es');
+        $array     = iterator_to_array($generator);
 
-        $this->assertSame(
-            $array[0]['translate_id'],
-            '1'
+        $this->assertCount(
+            4,
+            $array
+        );
+        $this->assertCount(
+            2,
+            $array[3]
         );
         $this->assertSame(
             $array[0]['en'],
             'homework'
         );
         $this->assertSame(
-            $array[1]['es'],
-            'Contáctenos'
+            $array[0]['es'],
+            'tarea'
         );
+        $this->assertSame(
+            $array[2]['en'],
+            'Algebra'
+        );
+        $this->assertSame(
+            $array[2]['es'],
+            'Álgebra'
+        );
+
+        $generator = $this->translateTable->selectLanguage('fr');
+        $array     = iterator_to_array($generator);
+
         $this->assertSame(
             $array[2]['fr'],
             'Algèbre'
-        );
-        $this->assertSame(
-            $array[3]['en'],
-            'mathematics'
-        );
-        $this->assertSame(
-            $array[3]['es'],
-            'matemáticas'
         );
         $this->assertSame(
             $array[3]['fr'],
