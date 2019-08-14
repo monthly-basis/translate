@@ -15,7 +15,7 @@ class Translate extends AbstractHelper
 
     public function __invoke(
         string $string,
-        string $language
+        string $language = null
     ) {
         return $this->translateService->translate(
             $string,
