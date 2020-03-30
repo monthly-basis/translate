@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "35b7285f7f0a9a0488697e6a31005ed9",
+    "content-hash": "db8345b33012a69db53aacb24106954a",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -1351,7 +1351,7 @@
         },
         {
             "name": "leo-galleguillos/memcached",
-            "version": "dev-master",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Memcached.git",
@@ -1382,7 +1382,7 @@
         },
         {
             "name": "leo-galleguillos/test",
-            "version": "dev-master",
+            "version": "v1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/LeoGalleguillos/Test.git",
@@ -3031,10 +3031,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "leo-galleguillos/memcached": 20,
-        "leo-galleguillos/test": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
