@@ -28,6 +28,10 @@ class Translate
         string $string,
         string $language = null
     ): string {
+        if ($language == 'en') {
+            return $string;
+        }
+
         if (!isset($language)) {
             $language = $this->getLanguage();
         }
