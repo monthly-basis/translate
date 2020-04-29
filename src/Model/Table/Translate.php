@@ -54,13 +54,11 @@ class Translate
 
     public function selectLanguage(string $language): Generator
     {
-        $validLanguages = [
-            'es',
-            'fr',
-        ];
-        if (!in_array($language, $validLanguages)) {
+        $pattern = '/^\w{2}$/';
+        if (!preg_match($pattern, $language)) {
             throw new Exception('Invalid language.');
         }
+
         $sql = "
             SELECT `en`
                  , `$language`
