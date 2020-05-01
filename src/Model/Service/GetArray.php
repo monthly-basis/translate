@@ -24,7 +24,7 @@ class GetArray
         $generator = $this->translateTable->selectLanguage($language);
 
         foreach ($generator as $row) {
-            $array[$row['en']] = $row['es'];
+            $array[$row['en']] = $row[$language];
         }
 
         $this->memcachedService->setForDays($cacheKey, $array, 28);
