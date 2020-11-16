@@ -8,7 +8,7 @@ use Zend\Db\Adapter\Exception\InvalidQueryException;
 
 class TranslateTest extends TableTestCase
 {
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->translateTable = new TranslateTable\Translate(
             $this->getAdapter()
