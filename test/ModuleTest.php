@@ -2,7 +2,7 @@
 namespace LeoGalleguillos\TranslateTest;
 
 use LeoGalleguillos\Translate\Module;
-use LeoGalleguillos\Test\ModuleTestCase;
+use MonthlyBasis\LaminasTest\ModuleTestCase;
 
 class ModuleTest extends ModuleTestCase
 {

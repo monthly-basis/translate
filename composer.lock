@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "db8345b33012a69db53aacb24106954a",
+    "content-hash": "5fa3d181ec7e1c193dacf1ba53792c84",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -2085,17 +2085,17 @@
             "time": "2020-11-10T20:57:30+00:00"
         },
         {
-            "name": "leo-galleguillos/test",
-            "version": "v1.0.12",
+            "name": "monthly-basis/laminas-test",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/LeoGalleguillos/Test.git",
-                "reference": "313e9bc536f6ce1e28eeecab25ea4aa11e203755"
+                "url": "https://github.com/monthly-basis/laminas-test.git",
+                "reference": "870e87fb7332d60c67a993abfd75652a295db4fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Test/zipball/313e9bc536f6ce1e28eeecab25ea4aa11e203755",
-                "reference": "313e9bc536f6ce1e28eeecab25ea4aa11e203755",
+                "url": "https://api.github.com/repos/monthly-basis/laminas-test/zipball/870e87fb7332d60c67a993abfd75652a295db4fa",
+                "reference": "870e87fb7332d60c67a993abfd75652a295db4fa",
                 "shasum": ""
             },
             "require": {
@@ -2105,16 +2105,15 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "LeoGalleguillos\\Test\\": "src/",
-                    "LeoGalleguillos\\TestTest\\": "test/"
+                    "MonthlyBasis\\LaminasTest\\": "src/",
+                    "MonthlyBasis\\LaminasTestTest\\": "test/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
-            "abandoned": "monthly-basis/laminas-test",
-            "time": "2020-06-06T16:07:22+00:00"
+            "time": "2020-07-03T01:24:44+00:00"
         },
         {
             "name": "myclabs/deep-copy",

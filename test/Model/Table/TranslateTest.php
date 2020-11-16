@@ -3,7 +3,7 @@ namespace LeoGalleguillos\TranslateTest\Model\Table;
 
 use Exception;
 use LeoGalleguillos\Translate\Model\Table as TranslateTable;
-use LeoGalleguillos\Test\TableTestCase;
+use MonthlyBasis\LaminasTest\TableTestCase;
 use Zend\Db\Adapter\Exception\InvalidQueryException;
 
 class TranslateTest extends TableTestCase
