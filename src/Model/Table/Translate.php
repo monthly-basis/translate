@@ -1,5 +1,5 @@
 <?php
-namespace LeoGalleguillos\Translate\Model\Table;
+namespace MonthlyBasis\Translate\Model\Table;
 
 use Exception;
 use Generator;

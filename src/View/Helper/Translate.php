@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\Translate\View\Helper;
+namespace MonthlyBasis\Translate\View\Helper;
 
-use LeoGalleguillos\Translate\Model\Entity as TranslateEntity;
-use LeoGalleguillos\Translate\Model\Service as TranslateService;
+use MonthlyBasis\Translate\Model\Entity as TranslateEntity;
+use MonthlyBasis\Translate\Model\Service as TranslateService;
 use Zend\View\Helper\AbstractHelper;
 
 class Translate extends AbstractHelper

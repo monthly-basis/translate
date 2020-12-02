@@ -1,8 +1,8 @@
 <?php
-namespace LeoGalleguillos\TranslateTest\Model\Table;
+namespace MonthlyBasis\TranslateTest\Model\Table;
 
 use Exception;
-use LeoGalleguillos\Translate\Model\Table as TranslateTable;
+use MonthlyBasis\Translate\Model\Table as TranslateTable;
 use MonthlyBasis\LaminasTest\TableTestCase;
 use Zend\Db\Adapter\Exception\InvalidQueryException;
 

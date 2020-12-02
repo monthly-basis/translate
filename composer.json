@@ -1,5 +1,5 @@
 {
-    "name": "leo-galleguillos/translate",
+    "name": "monthly-basis/translate",
     "license": "MIT",
     "require": {
         "laminas/laminas-db": "^2.9",
@@ -9,8 +9,8 @@
     },
     "autoload": {
         "psr-4": {
-            "LeoGalleguillos\\Translate\\": "src/",
-            "LeoGalleguillos\\TranslateTest\\": "test/"
+            "MonthlyBasis\\Translate\\": "src/",
+            "MonthlyBasis\\TranslateTest\\": "test/"
         }
     }
 }

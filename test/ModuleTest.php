@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\TranslateTest;
+namespace MonthlyBasis\TranslateTest;
 
-use LeoGalleguillos\Translate\Module;
+use MonthlyBasis\Translate\Module;
 use MonthlyBasis\LaminasTest\ModuleTestCase;
 
 class ModuleTest extends ModuleTestCase

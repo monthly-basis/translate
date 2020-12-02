@@ -1,7 +1,7 @@
 <?php
-namespace LeoGalleguillos\Translate\Model\Service;
+namespace MonthlyBasis\Translate\Model\Service;
 
-use LeoGalleguillos\Translate\Model\Service as TranslateService;
+use MonthlyBasis\Translate\Model\Service as TranslateService;
 
 class Translate
 {

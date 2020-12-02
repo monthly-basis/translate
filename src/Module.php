@@ -1,11 +1,11 @@
 <?php
-namespace LeoGalleguillos\Translate;
+namespace MonthlyBasis\Translate;
 
 use MonthlyBasis\Memcached\Model\Service as MemcachedService;
-use LeoGalleguillos\Translate\Model\Factory as TranslateFactory;
-use LeoGalleguillos\Translate\Model\Service as TranslateService;
-use LeoGalleguillos\Translate\Model\Table as TranslateTable;
-use LeoGalleguillos\Translate\View\Helper as TranslateHelper;
+use MonthlyBasis\Translate\Model\Factory as TranslateFactory;
+use MonthlyBasis\Translate\Model\Service as TranslateService;
+use MonthlyBasis\Translate\Model\Table as TranslateTable;
+use MonthlyBasis\Translate\View\Helper as TranslateHelper;
 
 class Module
 {
