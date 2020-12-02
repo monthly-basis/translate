@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "5fa3d181ec7e1c193dacf1ba53792c84",
+    "content-hash": "01676db55cad2eb24d0ff82ed45a2c7b",
     "packages": [
         {
             "name": "container-interop/container-interop",
@@ -2053,38 +2053,6 @@
             "time": "2020-09-14T14:23:00+00:00"
         },
         {
-            "name": "leo-galleguillos/memcached",
-            "version": "v1.0.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/LeoGalleguillos/Memcached.git",
-                "reference": "a955ebfbbb5a677730c6be45d1c647dc19a0a28b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/LeoGalleguillos/Memcached/zipball/a955ebfbbb5a677730c6be45d1c647dc19a0a28b",
-                "reference": "a955ebfbbb5a677730c6be45d1c647dc19a0a28b",
-                "shasum": ""
-            },
-            "require": {
-                "laminas/laminas-cache": "^2.7",
-                "laminas/laminas-test": "^3.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "LeoGalleguillos\\Memcached\\": "src/",
-                    "LeoGalleguillos\\MemcachedTest\\": "test/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "abandoned": "monthly-basis/memcached",
-            "time": "2020-11-10T20:57:30+00:00"
-        },
-        {
             "name": "monthly-basis/laminas-test",
             "version": "v2.0.0",
             "source": {
@@ -2114,6 +2082,37 @@
                 "MIT"
             ],
             "time": "2020-07-03T01:24:44+00:00"
+        },
+        {
+            "name": "monthly-basis/memcached",
+            "version": "v2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/monthly-basis/memcached.git",
+                "reference": "07bcdc81b0978928a4de034a443c9ee1c2be270c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/monthly-basis/memcached/zipball/07bcdc81b0978928a4de034a443c9ee1c2be270c",
+                "reference": "07bcdc81b0978928a4de034a443c9ee1c2be270c",
+                "shasum": ""
+            },
+            "require": {
+                "laminas/laminas-cache": "^2.7",
+                "laminas/laminas-test": "^3.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MonthlyBasis\\Memcached\\": "src/",
+                    "MonthlyBasis\\MemcachedTest\\": "test/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "time": "2020-11-11T01:06:06+00:00"
         },
         {
             "name": "myclabs/deep-copy",

@@ -1,7 +1,7 @@
 <?php
 namespace LeoGalleguillos\Translate\Model\Service;
 
-use LeoGalleguillos\Memcached\Model\Service as MemcachedService;
+use MonthlyBasis\Memcached\Model\Service as MemcachedService;
 use LeoGalleguillos\Translate\Model\Table as TranslateTable;
 
 class GetArray

@@ -1,7 +1,7 @@
 <?php
 namespace LeoGalleguillos\Translate;
 
-use LeoGalleguillos\Memcached\Model\Service as MemcachedService;
+use MonthlyBasis\Memcached\Model\Service as MemcachedService;
 use LeoGalleguillos\Translate\Model\Factory as TranslateFactory;
 use LeoGalleguillos\Translate\Model\Service as TranslateService;
 use LeoGalleguillos\Translate\Model\Table as TranslateTable;
