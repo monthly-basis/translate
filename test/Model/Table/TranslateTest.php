@@ -4,7 +4,7 @@ namespace MonthlyBasis\TranslateTest\Model\Table;
 use Exception;
 use MonthlyBasis\Translate\Model\Table as TranslateTable;
 use MonthlyBasis\LaminasTest\TableTestCase;
-use Zend\Db\Adapter\Exception\InvalidQueryException;
+use Laminas\Db\Adapter\Exception\InvalidQueryException;
 
 class TranslateTest extends TableTestCase
 {

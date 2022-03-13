@@ -3,7 +3,7 @@ namespace MonthlyBasis\Translate\Model\Table;
 
 use Exception;
 use Generator;
-use Zend\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Adapter;
 
 class Translate
 {
