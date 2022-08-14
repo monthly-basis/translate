@@ -3,7 +3,7 @@
     "license": "MIT",
     "require": {
         "laminas/laminas-db": "^2.9",
-        "laminas/laminas-test": "^3.1",
+        "laminas/laminas-test": "^4.0",
         "monthly-basis/laminas-test": "^2.0",
         "monthly-basis/memcached": "^2.0"
     },
