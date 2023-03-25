@@ -6,6 +6,7 @@ CREATE TABLE `translate` (
     `st` varchar(255) DEFAULT NULL,
     `sw` varchar(255) DEFAULT NULL,
     `tl` varchar(255) DEFAULT NULL,
+    `used` tinyint(1) DEFAULT NULL,
     PRIMARY KEY (`translate_id`),
     UNIQUE `en` (`en`)
 ) CHARSET=utf8mb4 COLLATE=utf8mb4_bin;
