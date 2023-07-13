@@ -1,7 +1,6 @@
 <?php
 namespace MonthlyBasis\Translate\View\Helper;
 
-use MonthlyBasis\Translate\Model\Entity as TranslateEntity;
 use MonthlyBasis\Translate\Model\Service as TranslateService;
 use Laminas\View\Helper\AbstractHelper;
 
