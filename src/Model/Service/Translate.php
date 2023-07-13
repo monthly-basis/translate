@@ -5,7 +5,7 @@ use MonthlyBasis\Translate\Model\Service as TranslateService;
 
 class Translate
 {
-    protected $language;
+    protected string $language;
 
     public function __construct(
         TranslateService\GetArray $getArrayService
