@@ -1,6 +1,7 @@
 <?php
 namespace MonthlyBasis\Translate\Model\Service;
 
+use MonthlyBasis\Memcached\Model\Service as MemcachedService;
 use MonthlyBasis\Translate\Model\Table as TranslateTable;
 
 class Translate
@@ -8,7 +9,8 @@ class Translate
     protected string $language;
 
     public function __construct(
-        protected TranslateTable\Translate $translateTable
+        protected MemcachedService\Memcached $memcachedService,
+        protected TranslateTable\Translate $translateTable,
     ) {
     }
 

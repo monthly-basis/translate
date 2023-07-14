@@ -39,6 +39,7 @@ class Module
                 },
                 TranslateService\Translate::class => function ($sm) {
                     return new TranslateService\Translate(
+                        $sm->get(MemcachedService\Memcached::class),
                         $sm->get(TranslateTable\Translate::class),
                     );
                 },
