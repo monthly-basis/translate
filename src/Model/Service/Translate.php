@@ -42,10 +42,11 @@ class Translate
             return $translation;
         }
 
-        $translation = $this->translateTable->selectLanguageWhereEn(
+        $result = $this->translateTable->selectLanguageWhereEn(
             $language,
             $string
         );
+        $translation = $result->current()[$language];
 
         $this->memcachedService->setForDays($cacheKey, $translation, 30);
         return $translation;
