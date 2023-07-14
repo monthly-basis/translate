@@ -52,7 +52,11 @@ class Translate
         }
 
         $translation = $result->current()[$language];
-        $this->memcachedService->setForDays($cacheKey, $translation, 30);
-        return $translation;
+        if (isset($translation)) {
+            $this->memcachedService->setForDays($cacheKey, $translation, 30);
+            return $translation;
+        }
+
+        return '';
     }
 }
