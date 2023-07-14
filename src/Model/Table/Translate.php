@@ -4,6 +4,7 @@ namespace MonthlyBasis\Translate\Model\Table;
 use Exception;
 use Generator;
 use Laminas\Db\Adapter\Adapter;
+use Laminas\Db\Adapter\Driver\Pdo\Result;
 
 class Translate
 {
@@ -70,5 +71,21 @@ class Translate
         foreach ($this->adapter->query($sql)->execute() as $row) {
             yield($row);
         }
+    }
+
+    public function selectLanguageWhereEn(string $language, string $en): Result
+    {
+        $pattern = '/^\w{2}$/';
+        if (!preg_match($pattern, $language)) {
+            throw new Exception('Invalid language.');
+        }
+
+        $sql = "
+            SELECT `$language`
+              FROM `translate`
+             WHERE `en` = ?
+                 ;
+        ";
+        return $this->adapter->query($sql)->execute([$en]);
     }
 }

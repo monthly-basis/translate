@@ -134,4 +134,13 @@ class TranslateTest extends TableTestCase
             'mathématiques'
         );
     }
+
+    public function test_selectLanguageWhereEn()
+    {
+        $result = $this->translateTable->selectLanguageWhereEn(
+            'es',
+            'Ask a New Question'
+        );
+        $this->assertEmpty(iterator_to_array($result));
+    }
 }
