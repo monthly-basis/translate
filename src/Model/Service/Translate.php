@@ -17,7 +17,7 @@ class Translate
         return $this->language;
     }
 
-    public function setLanguage(string $language): TranslateService\Translate
+    public function setLanguage(string $language): self
     {
         $this->language = $language;
         return $this;
