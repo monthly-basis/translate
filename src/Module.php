@@ -39,7 +39,7 @@ class Module
                 },
                 TranslateService\Translate::class => function ($sm) {
                     return new TranslateService\Translate(
-                        $sm->get(TranslateService\GetArray::class)
+                        $sm->get(TranslateTable\Translate::class),
                     );
                 },
                 TranslateTable\Translate::class => function ($serviceManager) {

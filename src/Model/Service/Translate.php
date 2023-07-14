@@ -1,16 +1,15 @@
 <?php
 namespace MonthlyBasis\Translate\Model\Service;
 
-use MonthlyBasis\Translate\Model\Service as TranslateService;
+use MonthlyBasis\Translate\Model\Table as TranslateTable;
 
 class Translate
 {
     protected string $language;
 
     public function __construct(
-        TranslateService\GetArray $getArrayService
+        protected TranslateTable\Translate $translateTable
     ) {
-        $this->getArrayService = $getArrayService;
     }
 
     public function getLanguage(): string
@@ -36,7 +35,17 @@ class Translate
             $language = $this->getLanguage();
         }
 
-        $array = $this->getArrayService->getArray($language);
-        return $array[$string] ?? '';
+        $cacheKey = md5($_SERVER['DOCUMENT_ROOT'] . __METHOD__ . $language . $string);
+        if (null !== ($translation = $this->memcachedService->get($cacheKey))) {
+            return $translation;
+        }
+
+        $translation = $this->translateTable->selectLanguageWhereEn(
+            $language,
+            $string
+        );
+
+        $this->memcachedService->setForDays($cacheKey, $translation, 30);
+        return $translation;
     }
 }
