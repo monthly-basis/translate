@@ -46,8 +46,12 @@ class Translate
             $language,
             $string
         );
-        $translation = $result->current()[$language];
 
+        if ($result->current() === false) {
+            return '';
+        }
+
+        $translation = $result->current()[$language];
         $this->memcachedService->setForDays($cacheKey, $translation, 30);
         return $translation;
     }
